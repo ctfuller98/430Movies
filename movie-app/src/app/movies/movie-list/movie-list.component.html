@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="row pad-left-right heading">
+        <span class="pull-left title">Movies</span>
+        <a class="btn btn-success pull-right" [routerLink]='["new"]'>Add Movie</a>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="center-panel">
+        <app-movie-item
+      *ngFor ='let movEL of movies'
+      [movie] = "movEL"></app-movie-item>
+      </div>
+    </div>
+  
+  </div>

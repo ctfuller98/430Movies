@@ -1,0 +1,26 @@
+<div class="details">
+        <h4 class="title margin-left-right heading">{{movie.title}}</h4>
+        <div class="buttons">
+          <a class="btn btn-info custombtn" [routerLink]="['edit']">Edit</a>
+          <a class="btn btn-danger custombtn">Delete</a>
+        </div>
+    <div class="panel-body info">
+      <div class="pad-left-right">
+        <div class="row">
+          <label>Rating:</label>
+          <span class="label-value"> {{movie.rating}}</span>
+        </div>
+        <br>
+        <div class="row">
+          <label>Score (out of 5): </label>
+          <span class="label-value"> {{movie.score}}</span>
+        </div>
+        <br>
+        <div class="row">
+          <label>Review:</label>
+          <span class="label-value"> {{movie.review}}</span>
+        </div>
+      </div>
+    </div>
+    <img src="{{movie.imgurl}}" alt={{movie.title}} width="100%">
+  </div>
