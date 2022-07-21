@@ -13,12 +13,12 @@ export class MovieListComponent implements OnInit {
 
   ngOnInit(): void {
     this.movies = this.movieService.getMovies();
-    /*this.movieService.movieListChangedEvent
+    this.movieService.movieListChangedEvent
     .subscribe(
       (movie: Movie[]) => {
         this.movies = movie;
       }
-    );*/
+    );
   }
 
 }

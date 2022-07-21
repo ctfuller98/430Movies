@@ -18,12 +18,12 @@ export class MovieDetailComponent implements OnInit {
     .subscribe(
       (params: Params) => {
         this.id = params['id']
-        this.movie = this.movieService.getOne(this.id)
+        this.movie = this.movieService.getMovie(this.id)
       })
   }
-  /*onDelete() {
+  onDelete() {
     this.movieService.deleteMovie(this.movie)
     this.router.navigate(['/movies'])
-  }*/
+  }
 
 }

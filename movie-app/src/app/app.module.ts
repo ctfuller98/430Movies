@@ -10,6 +10,7 @@ import { MovieListComponent } from './movies/movie-list/movie-list.component';
 import { MovieEditComponent } from './movies/movie-edit/movie-edit.component';
 import { MovieItemComponent } from './movies/movie-item/movie-item.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -25,7 +25,7 @@ export class MovieEditComponent implements OnInit {
           this.editMode = false;
           return
         }
-        this.originalMovie = this.movieService.getOne(this.id)
+        this.originalMovie = this.movieService.getMovie(this.id)
         if(this.originalMovie == undefined || this.originalMovie==null){
             return}
         this.editMode = true
@@ -41,12 +41,10 @@ export class MovieEditComponent implements OnInit {
       const value = form.value
       const newMovie = new Movie(this.id, value.title, value.rating, value.imgurl, value.score, value.review); 
       if (this.editMode === true){
-        console.log(newMovie)
-        //this.movieService.updateMovie(this.originalMovie, newMovie)
+        this.movieService.updateMovie(this.originalMovie, newMovie)
       } 
       else {
-        console.log("not in edit mode")
-        //this.movieService.addMovie(newMovie)
+        this.movieService.addMovie(newMovie)
       }
       this.router.navigate(['/movies'])
   }

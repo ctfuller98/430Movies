@@ -2,7 +2,7 @@
         <h4 class="title margin-left-right heading">{{movie.title}}</h4>
         <div class="buttons">
           <a class="btn btn-info custombtn" [routerLink]="['edit']">Edit</a>
-          <a class="btn btn-danger custombtn">Delete</a>
+          <a class="btn btn-danger custombtn" (click)="onDelete()">Delete</a>
         </div>
     <div class="panel-body info">
       <div class="pad-left-right">
